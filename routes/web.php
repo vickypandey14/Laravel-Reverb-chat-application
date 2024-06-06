@@ -1,12 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/dashboard', function (){
+
+    $users = User::where('id', '!=', auth()->user()->id)->get();
+
+    return view('dashboard', [
+        'users' => $users
+    ]);
+
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/chat/{id}', function ($id){
+
+    return view('chat', [
+        'id' => $id
+    ]);
+
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
