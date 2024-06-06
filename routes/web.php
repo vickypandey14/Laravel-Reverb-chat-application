@@ -21,7 +21,7 @@ Route::get('/chat/{id}', function ($id){
         'id' => $id
     ]);
 
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('chat');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
