@@ -12,7 +12,7 @@ class ChatComponent extends Component
     public $sender_id;
     public $receiver_id;
     public $message = '';
-    public $messages = '';
+    public $messages = [];
 
     public function render()
     {
@@ -34,6 +34,13 @@ class ChatComponent extends Component
         ->with('sender:id,name', 'receiver:id,name')->get();
 
         // dd($messages->toArray());
+
+        foreach ($messages as $message) 
+        {
+            $this->appendChatMessage($message);
+        }
+
+        // dd($this->messages);
 
         $this->user = User::whereId($user_id)->first();
     }
