@@ -1,6 +1,6 @@
 <div>
     <div style="overscroll-behavior: none;">
-        <div class="fixed w-full bg-green-400 h-16 pt-2 text-white flex justify-between shadow-md"
+        <div class="fixed w-full bg-purple-600 h-16 pt-2 text-white flex justify-between shadow-md"
             style="top:0px; overscroll-behavior: none;">
             <!-- back button -->
             <a href="{{ route('dashboard') }}" wire:navigate.hover>
@@ -9,7 +9,7 @@
                         d="M9.41 11H17a1 1 0 0 1 0 2H9.41l2.3 2.3a1 1 0 1 1-1.42 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.42 1.4L9.4 11z" />
                 </svg>
             </a>
-            <div class="my-3 text-green-100 font-bold text-lg tracking-wide">{{ $user->name }}</div>
+            <div class="my-3 text-green-100 font-bold text-lg tracking-wide"> {{ $user->name }}</div>
             <!-- 3 dots -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-dots-vertical w-8 h-8 mt-2 mr-2">
                 <path class="text-green-100 fill-current" fill-rule="evenodd"
@@ -18,7 +18,7 @@
         </div>
 
         <div class="mt-20 mb-16">
-            
+
             @foreach ($messages as $message)
                 @if ($message['sender'] != auth()->user()->name)
                     <div class="clearfix w-4/4">
@@ -28,8 +28,7 @@
                 @else
                     <div class="clearfix w-4/4">
                         <div class="text-right">
-                            <p class="bg-green-300 mx-4 my-2 p-2 rounded-lg inline-block">{{ $message['message'] }} <b>:
-                                    You</b></p>
+                            <p class="bg-green-300 mx-4 my-2 p-2 rounded-lg inline-block">{{ $message['message'] }}</p>
                         </div>
                     </div>
                 @endif
@@ -39,11 +38,10 @@
     </div>
 
     <form wire:submit="sendMessage()">
-        <div class="fixed w-full flex justify-between bg-green-100" style="bottom: 0px;">
-            <textarea class="flex-grow m-2 py-2 px-4 mr-1 rounded-full border border-gray-300 bg-gray-200 resize-none"
-                rows="1" wire:model="message" placeholder="Message..." style="outline: none;"></textarea>
+        <div class="fixed w-full flex justify-between bg-purple-100" style="bottom: 0px;">
+            <textarea class="flex-grow m-2 py-2 px-4 mr-1 rounded-full border border-gray-300 bg-gray-200 resize-none" rows="1" wire:model="message" placeholder="Message..." style="outline: none;" required></textarea>
             <button class="m-2" type="submit" style="outline: none;">
-                <svg class="svg-inline--fa text-green-400 fa-paper-plane fa-w-16 w-12 h-12 py-2 mr-2" aria-hidden="true"
+                <svg class="svg-inline--fa text-purple-600 fa-paper-plane fa-w-16 w-12 h-12 py-2 mr-2" aria-hidden="true"
                     focusable="false" data-prefix="fas" data-icon="paper-plane" role="img"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="currentColor"
