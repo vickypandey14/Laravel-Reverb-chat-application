@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')
+
+Route::view('/test', 'test');
 
 Route::get('/dashboard', function (){
 
