@@ -7,6 +7,8 @@ Route::view('/', 'welcome')
 
 Route::view('/test', 'test');
 
+Route::view('/test-2', 'test2');
+
 Route::get('/dashboard', function (){
 
     $users = User::where('id', '!=', auth()->user()->id)->get();
