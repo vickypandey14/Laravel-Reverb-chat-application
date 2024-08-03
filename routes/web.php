@@ -3,11 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
-Route::view('/', 'welcome')
-
-Route::view('/test', 'test');
-
-Route::view('/test-2', 'test2');
+Route::view('/', 'welcome');
 
 Route::get('/dashboard', function (){
 
