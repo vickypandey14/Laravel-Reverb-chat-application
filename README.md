@@ -66,7 +66,3 @@ After following the installation steps, you can start using the chat application
 
 - **Real-time messaging**: Send and receive messages in real-time without needing to refresh the page.
 - **Responsive UI**: The chat interface is designed to be responsive and works well on both desktop and mobile devices.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
