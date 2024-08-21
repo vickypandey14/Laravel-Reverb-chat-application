@@ -1,4 +1,4 @@
-# Laravel Reverb Chat Application
+# Laravel 11 Reverb Chat Application
 
 Welcome to the Laravel Reverb Chat Application! This project demonstrates how to build a real-time chat application using Laravel Reverb. 
 
