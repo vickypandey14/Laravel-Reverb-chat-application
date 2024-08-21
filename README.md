@@ -1,4 +1,4 @@
-# Laravel 11 Reverb Chat Application
+# Laravel Reverb Chat Application
 
 Welcome to the Laravel Reverb Chat Application! This project demonstrates how to build a real-time chat application using Laravel Reverb. 
 
@@ -33,7 +33,7 @@ To get started with this project, follow these steps:
    npm run dev
    ```
 
-3. **Set up environment variables**:
+3. **Set up the environment variables**:
    Copy `.env.example` to `.env` and configure your database and other environment variables as needed.
 
 4. **Run migrations**:
